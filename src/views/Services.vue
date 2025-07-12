@@ -246,6 +246,10 @@ const submitForm = () => {
         setTimeout(() => {
           Notification({ text: t('modal.notification') }, { type: "success" }, { time: "5000" }, { description: "" });
         }, 1000);
+
+        setTimeout(() => {
+          location.reload();
+        }, 5000);
       } else {
         Notification({ text: "Iltimos, ma'lumotlarni to'liq kiriting!" }, { type: "danger" }, { time: "5000" }, { description: "" });
       }
