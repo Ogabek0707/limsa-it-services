@@ -1,0 +1,184 @@
+{
+  "modal": {
+    "title": "Order a website for your business now, And get a small gift from us 10% off!",
+    "subtitle": "Satisfying every customer is our highest goal - LIMSA",
+    "button": "Send",
+    "form": {
+      "title": "Leave your details",
+      "name": "Your name",
+      "textarea": "Your massage"
+    },
+    "notification": "Your request has been accepted, we will be in touch soon!!"
+  },
+  "home": {
+    "header": {
+      "title1": "Home",
+      "title2": "Our Services",
+      "title3": "Our works",
+      "title4": "Prices"
+    },
+    "hero": {
+      "title": "Perfect 'IT' solutions to grow your business!",
+      "text": "Entrust your project to experts with more than 10 years of experience and achieve high success in a short time.",
+      "button": "Contact",
+      "accordion": {
+        "title": "Frequently Asked Questions",
+        "card1": {
+          "title": "Why are the prices so cheap?",
+          "text": "Our prices are really cheap compared to the quality. The reason is that we don't have excess labor in our web studio, so we don't have excess costs. That's why we keep our prices low compared to others."
+        },
+        "card2": {
+          "title": "Will I be able to edit the site myself in the future?",
+          "text": "Yes, of course, you will be given access and instructions to the content management system (adminka). Adminka has a convenient interface, is intuitive and does not require specific knowledge."
+        },
+        "card3": {
+          "title": "Will you continue to support the site after it's finished?",
+          "text": "Once we've finished your site, we'll keep it running for free, 24/7 for one year. After one year, it's $10/month."
+        }
+      },
+      "scrolling-text": {
+        "title": "WEBSITE BUILDING SERVICE",
+        "title2": "MOBILE APPS",
+        "title3": "AUTOMATION SYSTEMS",
+        "title4": "DIGITAL SOLUTIONS"
+      }
+    },
+    "work": {
+
+    },
+    "services": {
+      "title": "Why us? Why most people choose us?",
+      "text": "Our Benefits",
+      "card1": {
+        "title": "Adaptive",
+        "text": "The websites we create will be flexible. That is, they will have a tablet and mobile version. There will be no separate payment for this."
+      },
+      "card2": {
+        "title": "Admin",
+        "text": "Your website will have a convenient and simple admin panel that will allow you to manage the site from within."
+      },
+      "card3": {
+        "title": "Protection",
+        "text": "Our websites are protected by modern anti-virus and firewalls to resist spambots and attacks."
+      },
+      "card4": {
+        "title": "Monitoring 24/7",
+        "text": "Your website is automatically monitored online 24 hours a day to keep it up and running."
+      },
+      "card5": {
+        "title": "Domain and Hosting",
+        "text": "Domain and hosting run around, forget about headaches. We have domain UZ and hosting free for 6 months (then $10/month)"
+      },
+      "card6": {
+        "title": "Unique",
+        "text": "The design of each site we create will be unique and different from other sites. One design is one site!"
+      }
+    },
+    "order": {
+      "title": "Order a website for your business now, And get a small gift from us 10% off!",
+      "text": "Satisfying every customer is our highest goal - LIMSA",
+      "pages": "Pages",
+      "form": {
+        "title": "Leave your details",
+        "name": "Your name",
+        "textarea": "Your message",
+        "button": "Send"
+      }
+    },
+    "contact": {
+      "title": "Contacts",
+      "address": "Address",
+      "address2": "Tashkent city Yunusabad district",
+      "working-time": "Working hours",
+      "week": "9:00 18:00 Monday-Saturday",
+      "phone-number": "Phone Number",
+      "social-media": "Social networks"
+    },
+    "footer": "All rights reserved."
+  },
+  "services": {
+    "title": "Our Services"
+  },
+  "works": {
+    "auto": {
+      "title": "autozoomrental.com",
+      "text": "AutoZoomRental – қулай ва ишончли автотранспорт ижараси! Сайоҳатингизни бизнинг автомобиллар билан янада ёқимли қилинг."
+    },
+    "academy": {
+      "title": "it-time-academy.uz",
+      "text": "IT Time Academy – замонавий IT билимларнинг манзили! Келажак касбларини биз билан эгалланг."
+    },
+    "uzloyal": {
+      "title": "uzloyal.uz",
+      "text": "UzLoyal – ишончли ва қулай лояллик тизими! Мижозларингизни рағбатлантиришнинг энг самарали усули."
+    },
+    "propartnyor": {
+      "title": "propartnyor.uz",
+      "text": "ProPartnyor – ишончли ва самарали ҳамкорликнинг манзили! Бизнесингизнинг муваффақияти учун биргаликда ҳаракат қиламиз."
+    },
+    "zamontour": {
+      "title": "zamontour.uz",
+      "text": "ZamonTour – хушбахт сайёҳлик тажрибасини биз билан тажриба қилинг! Биз билан сафарингиз янада ёқимли бўлиши кафолатланади."
+    },
+    "logistic": {
+      "title": "wtlogistic.uz",
+      "text": "WT Logistic — юкларни фураларда тез ва хавфсиз етказиб бериш! Мулкингиз ишончли қўлларда ва ўз вақтида манзилга етади."
+    },
+    "aviatrip": {
+      "title": "nemoaviatrip.uz",
+      "text": "Nemo Aviatrip — саёҳатингизни биз билан бошланг! Қулай авиачипталар ва сиз учун мос йўналишлар."
+    },
+    "visatour": {
+      "title": "easyvisatour.uz",
+      "text": "Easy Visa Tour — саёҳатда сизнинг қулайлигингиз — бизнинг ғамхўрлигимиз! Туризм, виза ва саргузаштлар осон йўлда."
+    },
+    "aoron": {
+      "title": "aoron.uz",
+      "text": "Aoron — премиал эркаклар кийими. Сифатли матолар, идеал ўлчам ва ҳақиқий услуб!"
+    },
+    "edu": {
+      "title": "psyedu.uz",
+      "text": "PsyEdu — онлайн психология тестлари ва ўқув платформаси. Саволларга жавоб беринг, ўзингизни ўрганинг ва ривожланинг!"
+    },
+    "tourland": {
+      "title": "tourland.uz",
+      "text": "Tourland — Шарқ гўзаллигини биз билан ҳис этинг! Янгича турлар, эсда қоларли саёҳатлар ва янги таассуротлар."
+    },
+    "flymoderntour": {
+      "title": "flymoderntour.uz",
+      "text": "Fly Modern Tour — саёҳат ҳақидаги орзуларингизни рўёбга чиқаринг! Режалаштиринг, ўрганинг ва шарқона хотираларни яратинг."
+    },
+    "tomu": {
+      "title": "tomu.uz",
+      "text": "TOMU — тил ўрганишнинг масофавий усули. Ўзингизга қулай пайтда ўрганинг, иш билан бирга олиб боринг ва янги чегараларни очинг!"
+    },
+    "tekgrup": {
+      "title": "tekgrup.uz",
+      "text": "TEKGRUP — соғлом дунё учун ҳаракат қиламиз! Фақат дори-дармон эмас, балки комплекс хизматлар ҳам сизнинг фаровонлигингиз учун."
+    },
+    "uae": {
+      "title": "luxlineuae.com",
+      "text": "Luxury Line Perfumes — эксклюзив атирлар коллекцияси. Биз билан атир санъати ва мукаммалликни ҳис этинг!"
+    },
+    "service": {
+      "title": "sigmaservice.uz",
+      "text": "Sigma Servis — автотранспорт таъмири бўлиб тўлаш шарти билан. Сифатли сервис, профессионал усталар ва ҳар бир мижозга индивидуал ёндашув!"
+    },
+    "car": {
+      "title": "jbscarrental.ae",
+      "text": "JBS Car Rental — Дубайда авто ижара. Люкс машиналар, қулай шартлар ва осон онлайн хизмат!"
+    },
+    "assitech": {
+      "title": "assitech.uz",
+      "text": "ASSI Tech — тиббий ускуналар ва сервис. Сотиш, хизмат кўрсатиш ва УЗИ курсларини ташкил этиш сифати кафолати билан!"
+    },
+    "nippon": {
+      "title": "nippon.com.uz",
+      "text": "Nippon — япон тили ва Японияда ўқиш имконияти. Барча даражалар учун курслар, имтиҳонларга тайёргарлик ва стипендия олиш имконияти!"
+    },
+    "ifly": {
+      "title": "ifly.com.uz",
+      "text": "iFly — Туркияга экскурсиялар ва турлар. Бой тарих, маданият ва гўзал манзараларни биз билан кашф этинг!"
+    }
+  }
+}
