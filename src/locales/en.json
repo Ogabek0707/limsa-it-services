@@ -100,85 +100,88 @@
     "title": "Our Services"
   },
   "works": {
+    "title": "Our Recent Projects",
+    "button": "Show more",
+    "backToTop": "Collapse",
     "auto": {
       "title": "autozoomrental.com",
-      "text": "AutoZoomRental – қулай ва ишончли автотранспорт ижараси! Сайоҳатингизни бизнинг автомобиллар билан янада ёқимли қилинг."
+      "text": "AutoZoomRental - convenient and reliable car rental! Make your trip more pleasant with our cars."
     },
     "academy": {
       "title": "it-time-academy.uz",
-      "text": "IT Time Academy – замонавий IT билимларнинг манзили! Келажак касбларини биз билан эгалланг."
+      "text": "IT Time Academy is the destination of modern IT knowledge! Take the professions of the future with us."
     },
     "uzloyal": {
       "title": "uzloyal.uz",
-      "text": "UzLoyal – ишончли ва қулай лояллик тизими! Мижозларингизни рағбатлантиришнинг энг самарали усули."
+      "text": "UzLoyal is a reliable and convenient loyalty system! The most effective way to motivate your customers."
     },
     "propartnyor": {
       "title": "propartnyor.uz",
-      "text": "ProPartnyor – ишончли ва самарали ҳамкорликнинг манзили! Бизнесингизнинг муваффақияти учун биргаликда ҳаракат қиламиз."
+      "text": "ProPartnyor is the address of reliable and effective cooperation! We will work together for the success of your business."
     },
     "zamontour": {
       "title": "zamontour.uz",
-      "text": "ZamonTour – хушбахт сайёҳлик тажрибасини биз билан тажриба қилинг! Биз билан сафарингиз янада ёқимли бўлиши кафолатланади."
+      "text": "ZamonTour – experience a happy tourist experience with us! Your trip with us is guaranteed to be more pleasant."
     },
     "logistic": {
       "title": "wtlogistic.uz",
-      "text": "WT Logistic — юкларни фураларда тез ва хавфсиз етказиб бериш! Мулкингиз ишончли қўлларда ва ўз вақтида манзилга етади."
+      "text": "WT Logistic — fast and secure freight delivery by trucks across the region! Your goods are in safe hands and always on time."
     },
     "aviatrip": {
       "title": "nemoaviatrip.uz",
-      "text": "Nemo Aviatrip — саёҳатингизни биз билан бошланг! Қулай авиачипталар ва сиз учун мос йўналишлар."
+      "text": "Nemo Aviatrip — start your journey with us! Convenient air tickets and comfortable routes for your travels."
     },
     "visatour": {
       "title": "easyvisatour.uz",
-      "text": "Easy Visa Tour — саёҳатда сизнинг қулайлигингиз — бизнинг ғамхўрлигимиз! Туризм, виза ва саргузаштлар осон йўлда."
+      "text": "Easy Visa Tour — your comfort in travel is our concern! Tourism, visas, and adventures made easy."
     },
     "aoron": {
       "title": "aoron.uz",
-      "text": "Aoron — премиал эркаклар кийими. Сифатли матолар, идеал ўлчам ва ҳақиқий услуб!"
+      "text": "Aoron — premium men's clothing. Quality fabrics, perfect fit and timeless style for real men."
     },
     "edu": {
       "title": "psyedu.uz",
-      "text": "PsyEdu — онлайн психология тестлари ва ўқув платформаси. Саволларга жавоб беринг, ўзингизни ўрганинг ва ривожланинг!"
+      "text": "PsyEdu — online psychology tests and learning platform. Answer questions, explore yourself, and grow with us!"
     },
     "tourland": {
       "title": "tourland.uz",
-      "text": "Tourland — Шарқ гўзаллигини биз билан ҳис этинг! Янгича турлар, эсда қоларли саёҳатлар ва янги таассуротлар."
+      "text": "Tourland — feel the beauty of the East with us! Unique tours, new experiences, and unforgettable journeys."
     },
     "flymoderntour": {
       "title": "flymoderntour.uz",
-      "text": "Fly Modern Tour — саёҳат ҳақидаги орзуларингизни рўёбга чиқаринг! Режалаштиринг, ўрганинг ва шарқона хотираларни яратинг."
+      "text": "Fly Modern Tour — make your travel dreams come true! Plan, explore, and create unforgettable Eastern memories with us."
     },
     "tomu": {
       "title": "tomu.uz",
-      "text": "TOMU — тил ўрганишнинг масофавий усули. Ўзингизга қулай пайтда ўрганинг, иш билан бирга олиб боринг ва янги чегараларни очинг!"
+      "text": "TOMU — a remote method for language learning. Study at your convenience, combine with work, and open new horizons!"
     },
     "tekgrup": {
       "title": "tekgrup.uz",
-      "text": "TEKGRUP — соғлом дунё учун ҳаракат қиламиз! Фақат дори-дармон эмас, балки комплекс хизматлар ҳам сизнинг фаровонлигингиз учун."
+      "text": "TEKGRUP — striving for a healthy world! Not only medicines, but also comprehensive services for your well-being."
     },
     "uae": {
       "title": "luxlineuae.com",
-      "text": "Luxury Line Perfumes — эксклюзив атирлар коллекцияси. Биз билан атир санъати ва мукаммалликни ҳис этинг!"
+      "text": "Luxury Line Perfumes — exclusive collections of fragrances. Experience the art of perfumery with our luxury perfumes, crafted to perfection!"
     },
     "service": {
       "title": "sigmaservice.uz",
-      "text": "Sigma Servis — автотранспорт таъмири бўлиб тўлаш шарти билан. Сифатли сервис, профессионал усталар ва ҳар бир мижозга индивидуал ёндашув!"
+      "text": "Sigma Servis — car repair in installments. Quality service, professional masters, and an individual approach to every client!"
     },
     "car": {
       "title": "jbscarrental.ae",
-      "text": "JBS Car Rental — Дубайда авто ижара. Люкс машиналар, қулай шартлар ва осон онлайн хизмат!"
+      "text": "JBS Car Rental — car rental in Dubai. Luxury cars, great deals, and a convenient online service for your comfort!"
     },
     "assitech": {
       "title": "assitech.uz",
-      "text": "ASSI Tech — тиббий ускуналар ва сервис. Сотиш, хизмат кўрсатиш ва УЗИ курсларини ташкил этиш сифати кафолати билан!"
+      "text": "ASSI Tech — medical equipment and service. Sales, maintenance, and ultrasound courses with quality guarantee!"
     },
     "nippon": {
       "title": "nippon.com.uz",
-      "text": "Nippon — япон тили ва Японияда ўқиш имконияти. Барча даражалар учун курслар, имтиҳонларга тайёргарлик ва стипендия олиш имконияти!"
+      "text": "Nippon — Japanese language and study opportunities in Japan. Courses for all levels, exam preparation, and the chance to get a scholarship!"
     },
     "ifly": {
       "title": "ifly.com.uz",
-      "text": "iFly — Туркияга экскурсиялар ва турлар. Бой тарих, маданият ва гўзал манзараларни биз билан кашф этинг!"
+      "text": "iFly — excursions and tours to Turkey. Discover rich history, culture, and beautiful landscapes with us!"
     }
   }
 }

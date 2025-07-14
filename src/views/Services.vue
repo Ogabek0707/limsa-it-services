@@ -3,7 +3,7 @@
   <div class="w-full">
 
     <!-- bg-[#161616] -->
-    <section id="services" class="bg-[#161616]">
+    <section id="services" class="bg-[#161616] pb-[50px]">
       <div class="pt-[130px] flex justify-center">
         <h1 class="w-[180px] text-white py-[15px] px-[20px] border border-[#6c2dba] rounded-[20px] text-center">{{ t('services.title') }}</h1>
       </div>

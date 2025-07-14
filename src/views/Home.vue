@@ -72,17 +72,28 @@
     </section>
 
 
-
-
-    <section id="work"> 
+    <section id="work" class="pt-[100px] bg-[#161616]"> 
       <div class="px-[20px]">
+        <h1 class="text-white text-[35px] text-center font-bold mb-[80px]">{{ t('works.title') }}</h1>
         <div class="w-full grid gap-[40px] [grid-template-columns:repeat(3,_2fr)] px-[20px]">
-          <div v-for="(item, index) in works" :key="index" :to="item.path" class="text-white cursor-pointer" @click="routerSite(item.title)">
+          <div v-for="(item, index) in visibleWorks" :key="index" :to="item.path" class="text-white cursor-pointer pb-[10px]" @click="routerSite(item.title)">
               <h1 class="mb-[20px] font-bold">{{ item.title }}</h1>
-              <img class="max-w-[100%] h-[220px] bg-cover bg-center bg-no-repeat rounded-[5px]" :src="item.img" alt="">
+              <img class="max-w-[100%] h-[220px] bg-cover bg-center bg-no-repeat rounded-[5px] transition-transform duration-300 ease-in-out hover:scale-110" :src="item.img" alt="">
               <p class="max-w-[100%] mt-[20px]">{{ item.text }}</p>
           </div>
         </div>
+        <div class="text-center mt-[40px]">
+          <button 
+            @click="toggleShow"
+            class=" mt-[32px] mx-auto px-[38px] py-[12px] text-[1.14rem] font-bold rounded-[18px] text-white cursor-pointer shadow-[0_4px_18px_#2b105522] transition-all duration-300 ease-in-out"
+            style="background: linear-gradient(120deg, #6c2dba, #ff6b6b);"
+            onmouseover="this.style.background='linear-gradient(120deg, #ff6b6b, #6c2dba)'"
+            onmouseout="this.style.background='linear-gradient(120deg, #6c2dba, #ff6b6b)'"
+          >
+            {{ isAllShown ? '▲ ' + t('works.backToTop') : t('works.button') }}
+          </button>
+        </div>
+
       </div>
     </section>
 
@@ -298,9 +309,6 @@ import { ref, watch, computed, onMounted, onBeforeUnmount, onUnmounted } from 'v
 import AppModal from '../Modal/AppModal.vue';
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdiCellphoneLink, mdiAccountKeyOutline, mdiShieldPlusOutline, mdiHeadphones, mdiDomain, mdiWeb, mdiMapMarkerOutline, mdiClockTimeThree, mdiPhoneInTalkOutline, mdiShareVariant, mdiLinkedin, mdiInstagram, mdiSend, mdiArrowUpThick } from '@mdi/js';
-import VInput from '@/components/form/VInput.vue';
-import VButton from '@/components/form/VButton.vue';
-import VTell from '@/components/form/VTell.vue';
 import Notification from '../plugins/Notification'
 
 
@@ -332,7 +340,129 @@ const works = computed(() => [
     text: t('works.auto.text'),
     img: new URL('@/assets/images/avtozoomWebsite-DIxy4dc1.webp', import.meta.url).href
   },
+  {
+    title: t('works.academy.title'),
+    text: t('works.academy.text'),
+    img: new URL('@/assets/images/itTimeacademy.webp', import.meta.url).href
+  },
+  {
+    title: t('works.uzloyal.title'),
+    text: t('works.uzloyal.text'),
+    img: new URL('../assets/images/loyalWebsite-D9tpp8LY.webp', import.meta.url).href
+  },
+  {
+    title: t('works.propartnyor.title'),
+    text: t('works.propartnyor.text'),
+    img: new URL('../assets/images/propartnyor-uQTAyLvs.webp', import.meta.url).href
+  },
+  {
+    title: t('works.zamontour.title'),
+    text: t('works.zamontour.text'),
+    img: new URL('../assets/images/zamonTour-024a6rAZ.webp', import.meta.url).href
+  },
+  {
+    title: t('works.logistic.title'),
+    text: t('works.logistic.text'),
+    img: new URL('../assets/images/wtLogistic-DnsYO9xH.webp', import.meta.url).href
+  },
+  {
+    title: t('works.aviatrip.title'),
+    text: t('works.aviatrip.text'),
+    img: new URL('../assets/images/nemoaviatrip-DIEcXYgH.webp', import.meta.url).href
+  },
+  {
+    title: t('works.visatour.title'),
+    text: t('works.visatour.text'),
+    img: new URL('../assets/images/easyvisatour-DHk-YP-0.webp', import.meta.url).href
+  },
+  {
+    title: t('works.aoron.title'),
+    text: t('works.aoron.text'),
+    img: new URL('../assets/images/aoron-BRkcmKsT.webp', import.meta.url).href
+  },
+  {
+    title: t('works.edu.title'),
+    text: t('works.edu.text'),
+    img: new URL('../assets/images/psyedu-Bd1Vey72.webp', import.meta.url).href
+  },
+  {
+    title: t('works.tourland.title'),
+    text: t('works.tourland.text'),
+    img: new URL('../assets/images/tourland-BZYJe8JM.webp', import.meta.url).href
+  },
+  {
+    title: t('works.flymoderntour.title'),
+    text: t('works.flymoderntour.text'),
+    img: new URL('../assets/images/flymoderntour-D0zJM6w7.webp', import.meta.url).href
+  },
+  {
+    title: t('works.tomu.title'),
+    text: t('works.tomu.text'),
+    img: new URL('../assets/images/tomu-BQWRWZzj.webp', import.meta.url).href
+  },
+  {
+    title: t('works.tekgrup.title'),
+    text: t('works.tekgrup.text'),
+    img: new URL('../assets/images/tekgrup-7cCxsc8E.webp', import.meta.url).href
+  },
+  {
+    title: t('works.uae.title'),
+    text: t('works.uae.text'),
+    img: new URL('../assets/images/luxlineuae-CUc5T-l1.webp', import.meta.url).href
+  },
+  {
+    title: t('works.service.title'),
+    text: t('works.service.text'),
+    img: new URL('../assets/images/sigmaservis-CJc4qBUg.webp', import.meta.url).href
+  },
+  {
+    title: t('works.car.title'),
+    text: t('works.car.text'),
+    img: new URL('../assets/images/jbscarrental-ClWs5drC.webp', import.meta.url).href
+  },
+  {
+    title: t('works.assitech.title'),
+    text: t('works.assitech.text'),
+    img: new URL('../assets/images/assitech-C-5e7All.webp', import.meta.url).href
+  },
+  {
+    title: t('works.nippon.title'),
+    text: t('works.nippon.text'),
+    img: new URL('../assets/images/nipponcom-DYzeP2LU.webp', import.meta.url).href
+  },
+  {
+    title: t('works.ifly.title'),
+    text: t('works.ifly.text'),
+    img: new URL('../assets/images/iflycom-CsDm7x97.webp', import.meta.url).href
+  },
 ])
+
+// Nechta ko'rsatiladi
+const showCount = ref(6)
+const isAllShown = ref(false)
+
+// Faqat kerakli qismi ko'rsatiladi
+const visibleWorks = computed(() => works.value.slice(0, showCount.value))
+
+const toggleShow = () => {
+  if (!isAllShown.value) {
+    if (showCount.value + 6 < works.value.length) {
+      showCount.value += 6
+    } else {
+      showCount.value = works.value.length
+      isAllShown.value = true
+    }
+  } else {
+    showCount.value = 6
+    isAllShown.value = false
+
+    // 👇 ID bo‘yicha scroll qilish
+    const section = document.getElementById('work')
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+}
 
 const routerSite = (url) => {
   let a = 'https://'
