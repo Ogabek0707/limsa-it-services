@@ -1,7 +1,7 @@
 <template>
     <AppModal ref="openModal" />
     <div class="w-full">
-      <section id="work" class="pt-[100px] bg-[#161616]"> 
+      <section id="work" class="py-[100px] bg-[#161616]"> 
         <div class="px-[20px]">
           <h1 class="text-white text-[35px] text-center font-bold mb-[80px]">{{ t('works.title') }}</h1>
           <div class="w-full grid gap-[40px] [grid-template-columns:repeat(3,_2fr)] px-[20px]">

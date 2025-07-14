@@ -183,5 +183,39 @@
       "title": "ifly.com.uz",
       "text": "iFly — excursions and tours to Turkey. Discover rich history, culture, and beautiful landscapes with us!"
     }
+  },
+  "prices": {
+    "title": "Our prices",
+    "text": "Our affordable websites for you",
+    "card": {
+      "title": "LANDING PAGE",
+      "text": "Another name for a one-page site is a Landing Page. The page is easy to use and introduces the customer to the information they need.",
+      "title2": "",
+      "title3": "Protection 24/7",
+      "title4": "Duration 3 days",
+      "title5": "Number of pages 1",
+      "title6": "Negotiate",
+      "button": "Place Order"
+    },
+    "card2": {
+      "title": "SITE CARD",
+      "text": "It is the 'business card' of the company on the Internet. The site is to introduce the company's services or products to the people visiting the business page.",
+      "title2": "Domain UZ",
+      "title3": "Protection 24/7",
+      "title4": "Duration 3-7 days",
+      "title5": "Number of pages 2-4",
+      "title6": "Negotiate",
+      "button": "Place Order"
+    },
+    "card3": {
+      "title": "Exclusive",
+      "text": "This website is created based on your order. You can order any website you want.",
+      "title2": "Domain UZ",
+      "title3": "Protection 24/7",
+      "title4": "Number of languages ​​- Desired",
+      "title5": "High Design Level",
+      "title6": "Negotiate",
+      "button": "Place Order"
+    }
   }
 }

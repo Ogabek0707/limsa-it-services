@@ -3,8 +3,57 @@
     <div class="w-full">
 
         <section id="prices">
-            <div class="w-full px-[20px]">
-                
+            <div class="w-full pt-[150px] px-[30px]">
+                <h1 class="w-[180px] text-white py-[15px] px-[20px] m-auto border border-[#6c2dba] rounded-[20px] text-center">{{ t('prices.title') }}</h1>
+                <h2 class="text-white text-[35px] text-center font-bold mt-[20px] mb-[80px]">{{ t('prices.text') }}</h2>
+                <div class="w-full my-[10px] flex justify-between items-center text-white border border-[#ddd] hover:border-[#6c2dba] rounded-[8px] px-[30px] bg-cover bg-center bg-no-repeat" style="background-image: url('/src/assets/images/pricing-itembg-SEN5K1Vz.png');">
+                    <div class="w-[400px] py-[20px] border-r-[1px] border-[#ddd] ">
+                        <h1 class="text-[1.5rem] text-[#6c2dba] font-bold my-[20px]">{{ t('prices.card.title') }}</h1>
+                        <p class="max-w-[300px] text-[#c2c2c2] mb-[20px]">{{ t('prices.card.text') }}</p>
+                    </div>
+                        <div>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card.title2') }}</h1>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card.title3') }}</h1>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card.title4') }}</h1>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card.title5') }}</h1>
+                        </div>
+                        <div class="flex items-center gap-[30px]">
+                            <h1 class="text-[#6c2dba] text-[20px] font-bold">{{ t('prices.card.title6') }}</h1>
+                            <a href="#order" class="bg-[#6c2dba] py-[8px] px-[16px] rounded-[5px] font-bold">{{ t('prices.card.button') }}</a>
+                        </div>
+                </div>
+                <div class="w-full my-[10px] flex justify-between items-center text-white border border-[#ddd] hover:border-[#6c2dba] rounded-[8px] px-[30px] bg-cover bg-center bg-no-repeat" style="background-image: url('/src/assets/images/pricing-itembg-SEN5K1Vz.png');">
+                    <div class="w-[400px] py-[20px] border-r-[1px] border-[#ddd] ">
+                        <h1 class="text-[1.5rem] text-[#6c2dba] font-bold my-[20px]">{{ t('prices.card2.title') }}</h1>
+                        <p class="max-w-[300px] text-[#c2c2c2] mb-[20px]">{{ t('prices.card2.text') }}</p>
+                    </div>
+                        <div>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card2.title2') }}</h1>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card2.title3') }}</h1>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card2.title4') }}</h1>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card2.title5') }}</h1>
+                        </div>
+                        <div class="flex items-center gap-[30px]">
+                            <h1 class="text-[#6c2dba] text-[20px] font-bold">{{ t('prices.card2.title6') }}</h1>
+                            <a href="#order" class="bg-[#6c2dba] py-[8px] px-[16px] rounded-[5px] font-bold">{{ t('prices.card2.button') }}</a>
+                        </div>
+                </div>
+                <div class="w-full my-[10px] flex justify-between items-center text-white border border-[#ddd] hover:border-[#6c2dba] rounded-[8px] px-[30px] bg-cover bg-center bg-no-repeat" style="background-image: url('/src/assets/images/pricing-itembg-SEN5K1Vz.png');">
+                    <div class="w-[400px] py-[20px] border-r-[1px] border-[#ddd] ">
+                        <h1 class="text-[1.5rem] text-[#6c2dba] font-bold my-[20px]">{{ t('prices.card3.title') }}</h1>
+                        <p class="max-w-[300px] text-[#c2c2c2] mb-[20px]">{{ t('prices.card3.text') }}</p>
+                    </div>
+                        <div>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card3.title2') }}</h1>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card3.title3') }}</h1>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card3.title4') }}</h1>
+                            <h1 class="flex text-[#a9a9a9] text-[0.9rem] gap-[8px] items-center"><svg-icon type="mdi" class="text-[#6c2dba]" :path="mdiCheckBold"></svg-icon>{{ t('prices.card3.title5') }}</h1>
+                        </div>
+                        <div class="flex items-center gap-[30px]">
+                            <h1 class="text-[#6c2dba] text-[20px] font-bold">{{ t('prices.card3.title6') }}</h1>
+                            <a href="#order" class="bg-[#6c2dba] py-[8px] px-[16px] rounded-[5px] font-bold">{{ t('prices.card3.button') }}</a>
+                        </div>
+                </div>
             </div>
         </section>
 
@@ -132,7 +181,7 @@ import { useI18n } from 'vue-i18n'
 import { ref, watch, computed, onMounted, onBeforeUnmount, onUnmounted } from 'vue'
 import AppModal from '../Modal/AppModal.vue';
 import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiMapMarkerOutline, mdiClockTimeThree, mdiPhoneInTalkOutline, mdiShareVariant, mdiLinkedin, mdiInstagram, mdiSend, mdiArrowUpThick } from '@mdi/js';
+import { mdiMapMarkerOutline, mdiClockTimeThree, mdiPhoneInTalkOutline, mdiShareVariant, mdiLinkedin, mdiInstagram, mdiSend, mdiArrowUpThick, mdiCheckBold } from '@mdi/js';
 import Notification from '../plugins/Notification'
 
 
