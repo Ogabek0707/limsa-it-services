@@ -196,18 +196,19 @@
         </div>
         <div class="w-[50%] p-[20px]">
           <h1 class="text-[32px] my-[20px] text-white">{{ t('modal.form.title') }}</h1>
-          <vee-form :validation-schema="schema" :initial-values="forms" @submit="send"
-            class="w-full text-center m-auto">
-            <VInput type="text" color="color" label="" name="Name" :placeholder="t('modal.form.name')"
-              class="mt-[20px]"></VInput>
-            <VTell type="text" color="color" label="" name="Tell" mask="+998 (##) ### ## ##"
-              placeholder="+998 (93) 893 67 07" class="mt-[20px] border-none text-white"></VTell>
-            <textarea name="textarea" id="" rows="6" :placeholder="t('modal.form.textarea')"
+          <form @submit.prevent="submitForm" class="w-full">
+            <input type="text" v-model="form.name" :placeholder="t('modal.form.name')"
+              class="w-full mt-[20px] bg-[#363636] py-[20px] px-[20px]  text-[13px] text-white outline-none border-none rounded-[25px] hover:border-black focus:border-blue-500"></input>
+              <br>
+            <input type="text" v-mask="'+998 (##) ### ## ##'" v-model="form.phone_number"
+              placeholder="+998 (93) 893 67 07" class="w-full mt-[20px] border-none text-white py-[20px] pl-[20px] text-[13px] bg-[#363636] outline-none rounded-[25px] hover:border-black focus:border-blue-500"></input>
+              <br>
+            <textarea name="textarea" v-model="form.textarea" rows="6" :placeholder="t('modal.form.textarea')"
               class="w-full bg-[#363636] mt-[20px] py-[17px] px-[25px] text-[13px] text-white rounded-[25px] outline-none border-none hover:border-black focus:border-blue-500"></textarea>
-            <VButton type="submit"
-              class="bg-[#6c2dba] border-none rounded-[25px] text-[15px] w-[47.7%] text-center mt-[25px] py-[15px]"
-              @click="send">{{ t('modal.button') }}</VButton>
-          </vee-form>
+            <button type="submit"
+              class="bg-[#6c2dba] border-none rounded-[25px] text-[15px] w-[47.7%] text-center mt-[25px] py-[15px] cursor-pointer"
+              @click="send">{{ t('modal.button') }}</button>
+          </form>
         </div>
       </div>
     </section>
@@ -340,32 +341,32 @@ const routerSite = (url) => {
   window.open(b, '_blank')
 }
 
-let forms = ref({
-    Name: "",
-    Email: "",
-    Tell: ""
+let form = ref({
+    name: '',
+    phone_number: "",
+    textarea: ''
 })
 
-const schema = computed(() => {
-  return {
-    Name: 'required|min:0|max:25',
-    Tell: 'required|min:0|max:21',
-    // Textarea: 'required|min:0|max:150',
-  }
-})
-const send = (value) => {
-  console.log(value);
-  if (value.Name) {
-    setTimeout(() => {
-      // dialog.value = false
-      Notification({ text: t('modal.notification') }, { type: "success" }, { time: "5000" }, { description: "" })
-      // location.reload()
-    }, 1000);
-    setTimeout(() => {
-      // dialog.value = false
-      // Notification({text: t('modal.notification')}, {type: "success"},{time: "5000"}, {description: ""})
-      location.reload()
-    }, 5000);
+const submitForm = () => {
+  console.log(form.value.phone_number.length );
+  if (form.value.name && form.value.name.length > 0) {
+    if(form.value.phone_number && form.value.phone_number.length >= 19 ){
+      if(form.value.textarea && form.value.textarea.length > 0){
+        setTimeout(() => {
+          Notification({ text: t('modal.notification') }, { type: "success" }, { time: "5000" }, { description: "" });
+        }, 1000);
+
+        setTimeout(() => {
+          location.reload();
+        }, 5000);
+      } else {
+        Notification({ text: "Iltimos, ma'lumotlarni to'liq kiriting!" }, { type: "danger" }, { time: "5000" }, { description: "" });
+      }
+    } else {
+        Notification({ text: "Iltimos, ma'lumotlarni to'liq kiriting!" }, { type: "danger" }, { time: "5000" }, { description: "" });
+    }
+  } else {
+    Notification({ text: "Iltimos, ma'lumotlarni to'liq kiriting!" }, { type: "danger" }, { time: "5000" }, { description: "" });
   }
 }
 

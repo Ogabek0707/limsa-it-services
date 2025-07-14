@@ -3,16 +3,25 @@
         <div class="w-full flex gap-[20px] p-2">
             <div class="max-w-[525px] p-[20px] text-white">
                 <h1 class="my-[20px] font-bold text-[35px]">{{ t('modal.title') }}</h1>
-                <h2 class="text-[16px] text-[#6c2dba] font-semibold tracking-[0.5px] leading-[1.1] mt-[10px]">{{ t('modal.subtitle') }}</h2>
+                <h2 class="text-[16px] text-[#6c2dba] font-semibold tracking-[0.5px] leading-[1.1] mt-[10px]">{{
+                    t('modal.subtitle') }}</h2>
             </div>
             <div class="w-[50%] p-[20px]">
                 <h1 class="text-[32px] my-[20px] text-white">{{ t('modal.form.title') }}</h1>
-                <vee-form :validation-schema="schema" :initial-values="forms" @submit="send" class="w-full text-center m-auto">
-                    <VInput type="text" color="color" label="" name="Name" :placeholder="t('modal.form.name')" class="mt-[20px]"></VInput>
-                    <VTell type="text" color="color" label="" name="Tell" mask="+998 (##) ### ## ##" placeholder="+998 (93) 893 67 07" class="mt-[20px] border-none text-white"></VTell>
-                    <textarea name="textarea" id="" rows="6" :placeholder="t('modal.form.textarea')" class="w-full bg-[#363636] mt-[20px] py-[17px] px-[25px] text-[13px] text-white rounded-[25px] outline-none border-none hover:border-black focus:border-blue-500"></textarea>
-                    <VButton type="submit" class="bg-[#6c2dba] border-none rounded-[25px] text-[15px] w-[47.7%] text-center mt-[25px] mb-[20px] py-[15px]"  @click="send">{{ t('modal.button') }}</VButton>
-                </vee-form>
+                <form @submit.prevent="submitForm" class="w-full">
+                    <input type="text" v-model="form.name" :placeholder="t('modal.form.name')"
+                        class="w-full mt-[20px] bg-[#363636] py-[20px] px-[20px]  text-[13px] text-white outline-none border-none rounded-[25px] hover:border-black focus:border-blue-500"></input>
+                    <br>
+                    <input type="text" v-mask="'+998 (##) ### ## ##'" v-model="form.phone_number"
+                        placeholder="+998 (93) 893 67 07"
+                        class="w-full mt-[20px] border-none text-white py-[20px] pl-[20px] text-[13px] bg-[#363636] outline-none rounded-[25px] hover:border-black focus:border-blue-500"></input>
+                    <br>
+                    <textarea name="textarea" v-model="form.textarea" rows="6" :placeholder="t('modal.form.textarea')"
+                        class="w-full bg-[#363636] mt-[20px] py-[17px] px-[25px] text-[13px] text-white rounded-[25px] outline-none border-none hover:border-black focus:border-blue-500"></textarea>
+                    <button type="submit"
+                        class="bg-[#6c2dba] border-none rounded-[25px] text-[15px] w-[47.7%] text-center mt-[25px] py-[15px] cursor-pointer"
+                        @click="send">{{ t('modal.button') }}</button>
+                </form>
             </div>
         </div>
     </AppModal>
@@ -22,64 +31,62 @@
 import { useI18n } from 'vue-i18n'
 import AppModal from '@/components/ui/app-modal.vue';
 import { ref, computed, watch } from 'vue';
-import VInput from '@/components/form/VInput.vue';
-import VButton from '@/components/form/VButton.vue';
-import VTell from '@/components/form/VTell.vue';
 import Notification from '../plugins/Notification'
 
 const dialog = ref(false)
 
-let forms = ref({
-    Name: "",
-    Email: "",
-    Tell: ""
+let form = ref({
+    name: '',
+    phone_number: "",
+    textarea: ''
 })
-
-const schema = computed(()=>{
-  return {
-    Name: 'required|min:0|max:25',
-    Tell: 'required|min:0|max:20',
-    // Textarea: 'required|min:0|max:150',
-  }
-})
-
-const send = (value) => {
-    console.log(value);
-    if(value.Name){
+const submitForm = () => {
+  console.log(form.value.phone_number.length );
+  if (form.value.name && form.value.name.length > 0) {
+    if(form.value.phone_number && form.value.phone_number.length >= 19 ){
+      if(form.value.textarea && form.value.textarea.length > 0){
         setTimeout(() => {
-            dialog.value = false
-            Notification({text: t('modal.notification')}, {type: "success"},{time: "5000"}, {description: ""})
-            // location.reload()
+          Notification({ text: t('modal.notification') }, { type: "success" }, { time: "5000" }, { description: "" });
         }, 1000);
+
+        setTimeout(() => {
+          location.reload();
+        }, 5000);
+      } else {
+        Notification({ text: "Iltimos, ma'lumotlarni to'liq kiriting!" }, { type: "danger" }, { time: "5000" }, { description: "" });
+      }
+    } else {
+        Notification({ text: "Iltimos, ma'lumotlarni to'liq kiriting!" }, { type: "danger" }, { time: "5000" }, { description: "" });
     }
+  } else {
+    Notification({ text: "Iltimos, ma'lumotlarni to'liq kiriting!" }, { type: "danger" }, { time: "5000" }, { description: "" });
+  }
 }
 
 const { t, locale } = useI18n()
 const lang = ref(locale.value)
 
 const otherLanguages = computed(() => {
-  const copy = { ...flags }
-  delete copy[lang.value]
-  return copy
+    const copy = { ...flags }
+    delete copy[lang.value]
+    return copy
 })
 const changeLanguage = (code) => {
-  lang.value = code
-  locale.value = code
-  localStorage.setItem('locale', code)
-  show.value = false
+    lang.value = code
+    locale.value = code
+    localStorage.setItem('locale', code)
+    show.value = false
 }
 
 watch(lang, (val) => {
-  locale.value = val
-  localStorage.setItem('locale', val)
+    locale.value = val
+    localStorage.setItem('locale', val)
 });
 
 const openModal = () => {
     dialog.value = true
 }
-defineExpose({openModal});
+defineExpose({ openModal });
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

@@ -126,9 +126,6 @@
               class="bg-[#6c2dba] border-none rounded-[25px] text-[15px] w-[47.7%] text-center mt-[25px] py-[15px] cursor-pointer"
               @click="send">{{ t('modal.button') }}</button>
           </form>
-          <!-- <vee-form :validation-schema="schema" :initial-values="forms" @submit="send" class="w-full text-center m-auto"> -->
-
-          <!-- </vee-form> -->
         </div>
       </div>
     </section>
@@ -230,13 +227,6 @@ let form = ref({
     textarea: ''
 })
 
-// const schema = computed(() => {
-//   return {
-//     Name: 'required|min:0|max:25',
-//     Tell: 'required|min:0|max:20',
-//     // Textarea: 'required|min:0|max:150',
-//   }
-// })
 
 const submitForm = () => {
   console.log(form.value.phone_number.length );
