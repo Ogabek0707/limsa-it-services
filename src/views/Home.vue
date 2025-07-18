@@ -1049,7 +1049,7 @@ watch(lang, (val) => {
     .faq-container {
       .container-img {
         .img {
-          max-height: 370px;
+          max-height: 350px;
         }
       }
       .accordion {
@@ -1088,5 +1088,16 @@ watch(lang, (val) => {
     }
   }
 
+}
+@media (max-width: 410px) {
+  #faq {
+    .faq-container {
+      .container-img {
+        .img {
+          max-height: 330px;
+        }
+      }
+    }
+  }
 }
 </style>

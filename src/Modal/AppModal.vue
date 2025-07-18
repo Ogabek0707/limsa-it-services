@@ -1,12 +1,12 @@
 <template>
     <AppModal v-model="dialog">
-        <div class="w-full flex gap-[20px] p-2">
-            <div class="max-w-[525px] p-[20px] text-white">
+        <div class="w-full flex gap-[20px] p-2 card">
+            <div class="max-w-[525px] p-[20px] text-white container">
                 <h1 class="my-[20px] font-bold text-[35px]">{{ t('modal.title') }}</h1>
                 <h2 class="text-[16px] text-[#6c2dba] font-semibold tracking-[0.5px] leading-[1.1] mt-[10px]">{{
                     t('modal.subtitle') }}</h2>
             </div>
-            <div class="w-[50%] p-[20px]">
+            <div class="w-[50%] p-[20px] form">
                 <h1 class="text-[32px] my-[20px] text-white">{{ t('modal.form.title') }}</h1>
                 <form @submit.prevent="submitForm" class="w-full">
                     <input type="text" v-model="form.name" :placeholder="t('modal.form.name')"
@@ -89,4 +89,69 @@ const openModal = () => {
 defineExpose({ openModal });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media (max-width: 1400px) {
+  .container {
+    max-width: 500px;
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .form {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    /* max-width: 500px; */
+    h1 {
+      font-size: 25px;
+    }
+  }
+  .form {
+    width: 100%;
+    h1 {
+      font-size: 28px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    /* max-width: 500px; */
+    h1 {
+      font-size: 22px;
+    }
+  }
+  .form {
+    width: 100%;
+    h1 {
+      font-size: 25px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .card {
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  .container {
+    max-width: 100%;
+    margin: auto;
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+  .form {
+    width: 100%;
+    padding: 0px;
+    h1 {
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+}
+</style>

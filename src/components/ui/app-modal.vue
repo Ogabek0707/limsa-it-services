@@ -42,7 +42,7 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    width: 65%;
+    width: 80%;
     max-height: 700px;
     background: rgba(0, 0, 0, 0.6);         // modal fonini qoraytiradi
     backdrop-filter: blur(10px);           // orqa fonni biroz ko‘rsatadi
@@ -85,6 +85,11 @@
 @media (max-width: 760px) {
     .app-modal{
         width: 60%;
+    }
+}
+@media (max-width: 1000px) {
+    .app-modal{
+        width: 90%;
     }
 }
 </style>
