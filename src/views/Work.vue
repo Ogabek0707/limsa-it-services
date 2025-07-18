@@ -2,9 +2,9 @@
     <AppModal ref="openModal" />
     <div class="w-full">
       <section id="work" class="py-[100px] bg-[#161616]"> 
-        <div class="px-[20px]">
-          <h1 class="text-white text-[35px] text-center font-bold mb-[80px]">{{ t('works.title') }}</h1>
-          <div class="w-full grid gap-[40px] [grid-template-columns:repeat(3,_2fr)] px-[20px]">
+        <div class="px-[20px] card">
+          <h1 class="text-white text-[35px] text-center font-bold mb-[80px] title">{{ t('works.title') }}</h1>
+          <div class="w-full grid gap-[40px] [grid-template-columns:repeat(3,_2fr)] px-[20px] card-c">
             <div v-for="(item, index) in visibleWorks" :key="index" :to="item.path" class="text-white cursor-pointer pb-[10px]" @click="routerSite(item.title)">
                 <h1 class="mb-[20px] font-bold">{{ item.title }}</h1>
                 <img class="max-w-[100%] h-[220px] bg-cover bg-center bg-no-repeat rounded-[5px] transition-transform duration-300 ease-in-out hover:scale-110" :src="item.img" alt="">
@@ -28,12 +28,12 @@
       <!-- <RouterView /> -->
       <section id="order" class="bg-cover bg-center bg-no-repeat pt-[150px] pb-[100px] w-full h-[100%]" 
       style="background-image: url('/src/assets/images/order.jpg');">
-        <div class="w-full flex gap-[0px] justify-center p-2">
+        <div class="w-full flex gap-[0px] justify-center p-2 container">
           <div class="p-[20px] text-white">
-            <h1 class="my-[20px] max-w-[615px] font-bold text-[35px]">{{ t('modal.title') }}</h1>
+            <h1 class="my-[20px] max-w-[615px] font-bold text-[35px] card">{{ t('modal.title') }}</h1>
             <h2 class="text-[16px] text-[#6c2dba] font-semibold tracking-[0.5px] leading-[1.1] mt-[10px]">{{
               t('modal.subtitle') }}</h2>
-            <div>
+            <div class="pages">
               <h1 class="text-[19px] font-bold my-[20px]">{{ t('home.order.pages') }}</h1>
               <router-link to="/" class="text-[#6c6c6c]">{{ t('home.header.title1') }}</router-link>
               <br>
@@ -41,7 +41,7 @@
               <router-link to="/services" class="text-[#6c6c6c]">{{ t('home.header.title2') }}</router-link>
             </div>
           </div>
-          <div class="w-[50%] p-[20px]">
+          <div class="w-[50%] p-[20px] card2">
             <h1 class="text-[32px] my-[20px] text-white">{{ t('modal.form.title') }}</h1>
             <form @submit.prevent="submitForm" class="w-full">
               <input type="text" v-model="form.name" :placeholder="t('modal.form.name')"
@@ -62,8 +62,8 @@
   
       <section id="contact" class="w-full bg-[#161616] py-[70px] px-[20px]">
         <div class="w-full px-[20px] text-white">
-          <h1 class="text-white text-[40px] my-[32px]">{{ t('home.contact.title') }}</h1>
-          <div class="w-full gap-[50px] flex justify-between items-center">
+          <h1 class="text-white text-[40px] my-[32px] title">{{ t('home.contact.title') }}</h1>
+          <div class="w-full gap-[50px] flex justify-between items-center container">
             <div class="grid gap-[30px] items-center grid-cols-2 [grid-template-columns:repeat(2,2fr)]">
               <div class="flex items-center gap-[20px]">
                 <svg-icon type="mdi" class="w-[27px] h-[27px] mt-[10px] text-[#a1a1a1]"
@@ -105,7 +105,7 @@
                 </div>
               </div>
             </div>
-            <div class="w-[50%]">
+            <div class="w-[50%] container-map">
               <iframe class="w-full h-[300px] rounded-[20px]"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.65547130854!2d69.28311021090116!3d41.33810459893217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b5f1f5cfd49%3A0x110bc2a5ed9856b7!2sLIMSA!5e0!3m2!1sru!2s!4v1730879135357!5m2!1sru!2s"
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe>
@@ -114,9 +114,9 @@
         </div>
       </section>
   
-      <footer class="py-[20px]">
+      <footer id="footer" class="py-[20px]">
         <div class="px-[20px]">
-          <div class="px-[20px] flex justify-between items-center">
+          <div class="px-[20px] flex justify-between items-center container">
             <a href="/"><img class="w-[150px]" src="/src/assets/images/Limsa - Logotypecolor2-DK-aqGj3.png" alt=""></a>
             <p class="text-white">© 2024 Limsa. {{ t('home.footer') }}</p>
           </div>
@@ -367,4 +367,120 @@
     animation: scrollLeftToRight 15s linear infinite;
     will-change: transform;
   }
+@media (max-width: 1000px) {
+  #order {
+    .card {
+      max-width: 500px;
+      font-size: 30px;
+    }
+    .card2 {
+      width: 60%;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #work {
+    padding: 100px 0px 50px 0px;
+  }
+  #order {
+    padding: 50px 0px 20px 0px;
+  }
+  #contact {
+    padding: 40px 0px;
+  }
+}
+@media (max-width: 900px) {
+  #work {
+    .card {
+      padding: 0px;
+    }
+    img {
+      height: 150px;
+      max-width: 105%;
+    }
+  }
+  #order {
+    .card {
+      max-width: 450px;
+      font-size: 25px;
+    }
+    .card2 {
+      width: 70%;
+    }
+  }
+}
+@media (max-width: 850px) {
+  #contact {
+    .title {
+      text-align: center;
+    }
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+      .container-map {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  #order {
+    padding-top: 20px;
+    .container {
+      flex-wrap: wrap;
+      .card {
+        max-width: 100%;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      .pages {
+        text-align: center;
+      }
+      .card2 {
+        width: 90%;
+        h1 {
+          text-align: center;
+          margin: 5px 0px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 770px) {
+  #work {
+    .title {
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+    .card-c {
+      grid-template-columns: repeat(2, 2fr);
+    }
+  }
+}
+@media (max-width: 600px) {
+  #footer {
+    .container {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}
+@media (max-width: 550px) {
+  #work {
+    .title {
+      font-size: 25px;
+      margin-bottom: 50px;
+    }
+    .card-c {
+      grid-template-columns: repeat(1, 2fr);
+      margin-left: 10%;
+      width: 80%;
+      p {
+        max-width: 80%;
+      }
+    }
+  }
+}
   </style>

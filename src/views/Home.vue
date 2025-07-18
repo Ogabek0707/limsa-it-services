@@ -4,9 +4,9 @@
 
     <section id="hero"
       class="bg-cover bg-center bg-no-repeat pt-[150px] pb-[100px] w-full h-[100%]" style="background-image: url('/src/assets/images/download.jpg');">
-      <div class="w-full px-[20px]">
-        <div class="flex justify-between items-center gap-[32px] px-[20px]">
-          <div class="w-[500px] text-white">
+      <div class="w-full px-[20px] container">
+        <div class="flex justify-between items-center gap-[32px] px-[20px] row">
+          <div class="w-[500px] text-white card">
             <h1 class="text-[28px] leading-9 font-bold mb-[32px]">{{ t('home.hero.title') }}</h1>
             <p class="text-[16px] mb-[24px]">{{ t('home.hero.text') }}</p>
             <button
@@ -25,16 +25,16 @@
         'transition-all duration-700 ease-out',
         isVisible ? 'opacity-100 translate-y-0 delay-[300ms]' : 'opacity-0 translate-y-20'
       ]" class="w-full px-[20px]">
-        <div class="px-[20px] flex gap-[200px]">
-          <div class="flex items-center gap-[20px] w-[50%]">
-            <img src="../assets/images/faq__img1-CCfXCv88.png" class="pb-[150px]" alt="">
-            <img src="../assets/images/faq__img2-B2RlJ9tp.png" alt="">
+        <div class="px-[20px] flex gap-[300px] faq-container">
+          <div class="flex items-center gap-[20px] w-[50%] container-img">
+            <img src="../assets/images/faq__img1-CCfXCv88.png" class="pb-[150px] img" alt="">
+            <img src="../assets/images/faq__img2-B2RlJ9tp.png" class="img" alt="">
           </div>
-          <div>
+          <div class="accordion">
             <h1 class="text-[35px] mb-[29px] mt-[15px] font-bold text-white">{{ t('home.hero.accordion.title') }}</h1>
             <div class="flex justify-center gap-[30px] s-accordion">
               <div class="w-[100%]">
-                <div class="w-full max-w-xl mx-auto">
+                <div class="w-full mx-auto accordion-card">
                   <div v-for="(item, index) in items" :key="index"
                     class="border border-[#444] rounded-[20px] mb-[10px]">
                     <!-- Accordion Header -->
@@ -57,7 +57,7 @@
         </div>
       </div>
 
-      <div class="relative overflow-hidden h-[110px] flex items-center">
+      <div class="relative overflow-hidden h-[110px] flex items-center animation">
         <div
           class="scrolling-text text-[#faf6f6] text-[28px] font-bold flex justify-center items-center gap-[60px] whitespace-nowrap">
           <span>{{ t('home.hero.scrolling-text.title') }}</span>
@@ -73,9 +73,9 @@
 
 
     <section id="work" class="pt-[100px] bg-[#161616]"> 
-      <div class="px-[20px]">
-        <h1 class="text-white text-[35px] text-center font-bold mb-[80px]">{{ t('works.title') }}</h1>
-        <div class="w-full grid gap-[40px] [grid-template-columns:repeat(3,_2fr)] px-[20px]">
+      <div class="px-[20px] card">
+        <h1 class="text-white text-[35px] text-center font-bold mb-[80px] title">{{ t('works.title') }}</h1>
+        <div class="w-full grid gap-[40px] [grid-template-columns:repeat(3,_2fr)] px-[20px] card-c">
           <div v-for="(item, index) in visibleWorks" :key="index" :to="item.path" class="text-white cursor-pointer pb-[10px]" @click="routerSite(item.title)">
               <h1 class="mb-[20px] font-bold">{{ item.title }}</h1>
               <img class="max-w-[100%] h-[220px] bg-cover bg-center bg-no-repeat rounded-[5px] transition-transform duration-300 ease-in-out hover:scale-110" :src="item.img" alt="">
@@ -97,9 +97,6 @@
       </div>
     </section>
 
-
-
-
     <!-- bg-[#161616] -->
     <section id="services" class="bg-[#161616]">
       <div class="w-full px-[20px] pt-[30px] bg-cover bg-center bg-no-repeat" id="services-animation" :class="[
@@ -110,73 +107,73 @@
         ]">
         <div class="w-full px-[20px] text-white">
           <div class="m-auto max-w-[1000px]">
-            <h1 class="text-center font-bold text-[40px]">{{ t('home.services.title') }}</h1>
-            <p class="text-center text-[40px] text-[#6c2dba] my-[20px] font-bold">{{ t('home.services.text') }}</p>
+            <h1 class="text-center font-bold text-[40px] title">{{ t('home.services.title') }}</h1>
+            <p class="text-center text-[40px] text-[#6c2dba] my-[20px] font-bold title">{{ t('home.services.text') }}</p>
           </div>
           <div class="w-full mt-[50px] flex gap-[20px] justify-around items-center flex-wrap">
-            <div class="bg-black w-[30%] p-[35px] rounded-[15px] flex">
-              <div>
+            <div class="bg-black w-[30%] card p-[35px] rounded-[15px] flex">
+              <div class="card-icon">
                 <svg-icon type="mdi" class="text-white w-[50px] h-[50px]" :path="mdiCellphoneLink"></svg-icon>
                 <p class="text-[24px] my-[24px]">01</p>
               </div>
-              <div class="ml-[30px]">
+              <div class="ml-[30px] card-text">
                 <h1 class="text-[22px] font-bold">{{ t('home.services.card1.title') }}</h1>
                 <p class="text-[12px] leading-[25px] max-w-[300px] my-[12px]" style="color: rgb(177, 177, 177)">{{
                   t('home.services.card1.text') }}</p>
               </div>
             </div>
-            <div class="bg-black w-[30%] p-[35px] rounded-[15px] flex">
-              <div>
+            <div class="bg-black w-[30%] card p-[35px] rounded-[15px] flex">
+              <div class="card-icon">
                 <svg-icon type="mdi" class="text-white w-[50px] h-[50px] ml-[-10px]"
                   :path="mdiAccountKeyOutline"></svg-icon>
                 <p class="text-[24px] my-[24px]">02</p>
               </div>
-              <div class="ml-[30px]">
+              <div class="ml-[30px] card-text">
                 <h1 class="text-[22px] font-bold">{{ t('home.services.card2.title') }}</h1>
                 <p class="text-[12px] leading-[25px] max-w-[300px] my-[12px]" style="color: rgb(177, 177, 177)">{{
                   t('home.services.card2.text') }}</p>
               </div>
             </div>
-            <div class="bg-black w-[30%] p-[35px] rounded-[15px] flex">
-              <div>
+            <div class="bg-black w-[30%] card p-[35px] rounded-[15px] flex">
+              <div class="card-icon">
                 <svg-icon type="mdi" class="text-white w-[50px] h-[50px] ml-[-10px]"
                   :path="mdiShieldPlusOutline"></svg-icon>
                 <p class="text-[24px] my-[24px]">03</p>
               </div>
-              <div class="ml-[30px]">
+              <div class="ml-[30px] card-text">
                 <h1 class="text-[22px] font-bold">{{ t('home.services.card3.title') }}</h1>
                 <p class="text-[12px] leading-[25px] max-w-[300px] my-[12px]" style="color: rgb(177, 177, 177)">{{
                   t('home.services.card3.text') }}</p>
               </div>
             </div>
-            <div class="bg-black w-[30%] p-[35px] rounded-[15px] flex">
-              <div>
+            <div class="bg-black w-[30%] card p-[35px] rounded-[15px] flex">
+              <div class="card-icon">
                 <svg-icon type="mdi" class="text-white w-[50px] h-[50px] ml-[-10px]" :path="mdiHeadphones"></svg-icon>
                 <p class="text-[24px] my-[24px]">04</p>
               </div>
-              <div class="ml-[30px]">
+              <div class="ml-[30px] card-text">
                 <h1 class="text-[22px] font-bold">{{ t('home.services.card4.title') }}</h1>
                 <p class="text-[12px] leading-[25px] max-w-[300px] my-[12px]" style="color: rgb(177, 177, 177)">{{
                   t('home.services.card4.text') }}</p>
               </div>
             </div>
-            <div class="bg-black w-[30%] p-[35px] rounded-[15px] flex">
-              <div>
+            <div class="bg-black w-[30%] card p-[35px] rounded-[15px] flex">
+              <div class="card-icon">
                 <svg-icon type="mdi" class="text-white w-[50px] h-[50px]" :path="mdiDomain"></svg-icon>
                 <p class="text-[24px] my-[24px]">05</p>
               </div>
-              <div class="ml-[30px]">
+              <div class="ml-[30px] card-text">
                 <h1 class="text-[22px] font-bold">{{ t('home.services.card5.title') }}</h1>
                 <p class="text-[12px] leading-[25px] max-w-[300px] my-[12px]" style="color: rgb(177, 177, 177)">{{
                   t('home.services.card5.text') }}</p>
               </div>
             </div>
-            <div class="bg-black w-[30%] p-[35px] rounded-[15px] flex">
-              <div>
+            <div class="bg-black w-[30%] card p-[35px] rounded-[15px] flex">
+              <div class="card-icon">
                 <svg-icon type="mdi" class="text-white w-[50px] h-[50px] ml-[-10px]" :path="mdiWeb"></svg-icon>
                 <p class="text-[24px] my-[24px]">06</p>
               </div>
-              <div class="ml-[30px]">
+              <div class="ml-[30px] card-text">
                 <h1 class="text-[22px] font-bold">{{ t('home.services.card6.title') }}</h1>
                 <p class="text-[12px] leading-[25px] max-w-[300px] my-[12px]" style="color: rgb(177, 177, 177)">{{
                   t('home.services.card6.text') }}</p>
@@ -189,15 +186,14 @@
 
     <RouterView />
 
-
     <section id="order" class="bg-cover bg-center bg-no-repeat pt-[150px] pb-[100px] w-full h-[100%]" 
     style="background-image: url('/src/assets/images/order.jpg');">
-      <div class="w-full flex gap-[0px] justify-center p-2">
+      <div class="w-full flex gap-[0px] justify-center p-2 container">
         <div class="p-[20px] text-white">
-          <h1 class="my-[20px] max-w-[615px] font-bold text-[35px]">{{ t('modal.title') }}</h1>
+          <h1 class="my-[20px] max-w-[615px] font-bold text-[35px] card">{{ t('modal.title') }}</h1>
           <h2 class="text-[16px] text-[#6c2dba] font-semibold tracking-[0.5px] leading-[1.1] mt-[10px]">{{
             t('modal.subtitle') }}</h2>
-          <div>
+          <div class="pages">
             <h1 class="text-[19px] font-bold my-[20px]">{{ t('home.order.pages') }}</h1>
             <router-link to="/" class="text-[#6c6c6c]">{{ t('home.header.title1') }}</router-link>
             <br>
@@ -205,7 +201,7 @@
             <router-link to="/services" class="text-[#6c6c6c]">{{ t('home.header.title2') }}</router-link>
           </div>
         </div>
-        <div class="w-[50%] p-[20px]">
+        <div class="w-[50%] p-[20px] card2">
           <h1 class="text-[32px] my-[20px] text-white">{{ t('modal.form.title') }}</h1>
           <form @submit.prevent="submitForm" class="w-full">
             <input type="text" v-model="form.name" :placeholder="t('modal.form.name')"
@@ -226,8 +222,8 @@
 
     <section id="contact" class="w-full bg-[#161616] py-[70px] px-[20px]">
       <div class="w-full px-[20px] text-white">
-        <h1 class="text-white text-[40px] my-[32px]">{{ t('home.contact.title') }}</h1>
-        <div class="w-full gap-[50px] flex justify-between items-center">
+        <h1 class="text-white text-[40px] my-[32px] title">{{ t('home.contact.title') }}</h1>
+        <div class="w-full gap-[50px] flex justify-between items-center container">
           <div class="grid gap-[30px] items-center grid-cols-2 [grid-template-columns:repeat(2,2fr)]">
             <div class="flex items-center gap-[20px]">
               <svg-icon type="mdi" class="w-[27px] h-[27px] mt-[10px] text-[#a1a1a1]"
@@ -269,7 +265,7 @@
               </div>
             </div>
           </div>
-          <div class="w-[50%]">
+          <div class="w-[50%] container-map">
             <iframe class="w-full h-[300px] rounded-[20px]"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.65547130854!2d69.28311021090116!3d41.33810459893217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b5f1f5cfd49%3A0x110bc2a5ed9856b7!2sLIMSA!5e0!3m2!1sru!2s!4v1730879135357!5m2!1sru!2s"
               loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe>
@@ -278,9 +274,9 @@
       </div>
     </section>
 
-    <footer class="py-[20px]">
+    <footer id="footer" class="py-[20px]">
       <div class="px-[20px]">
-        <div class="px-[20px] flex justify-between items-center">
+        <div class="px-[20px] flex justify-between items-center container">
           <a href="/"><img class="w-[150px]" src="/src/assets/images/Limsa - Logotypecolor2-DK-aqGj3.png" alt=""></a>
           <p class="text-white">© 2024 Limsa. {{ t('home.footer') }}</p>
         </div>
@@ -522,7 +518,7 @@ const handleClickOutside = (e) => {
 
 const isVisible = ref(false)
 
-let observer
+let observer = null
 
 onMounted(() => {
   const el = document.querySelector('#animated-section')
@@ -533,11 +529,14 @@ onMounted(() => {
   }
 
   observer = new IntersectionObserver(
-    ([entry]) => {
-      isVisible.value = entry.isIntersecting
+    ([entry], observer) => {
+      if (entry.isIntersecting) {
+        isVisible.value = true
+        observer.unobserve(entry.target) // ❗️ faqat bir marta kuzatadi
+      }
     },
     {
-      threshold: 0.2,
+      threshold: 0.1,
     }
   )
 
@@ -632,5 +631,462 @@ watch(lang, (val) => {
 .scrolling-text {
   animation: scrollLeftToRight 15s linear infinite;
   will-change: transform;
+}
+
+@media (max-width: 1155px) {
+    #faq {
+      .faq-container {
+        .container-img {
+          width: 60%;
+        }
+      }
+    }
+}
+@media (max-width: 1110px) {
+    #faq {
+      .faq-container {
+        /* flex-wrap: wrap; */
+        /* display: block; */
+        .container-img {
+          /* margin-left: 10%; */
+          img {
+            width: 95%;
+          }
+        }
+        .accordion {
+          width: 95%;
+        }
+      }
+    }
+    #services {
+        .card {
+          /* flex-wrap: wrap; */
+          width: 49%;
+        }
+      }
+}
+@media (max-width: 1080px) {
+    #services {
+        .card {
+          /* flex-wrap: wrap; */
+          width: 48%;
+        }
+      }
+  #hero {
+    .card {
+      h1 {
+        width: 400px;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 1023px) {
+  #hero {
+    .card {
+      h1 {
+        /* width: 400px; */
+      }
+    }
+    img {
+      max-width: 170%;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #faq {
+      .faq-container {
+        /* flex-wrap: wrap; */
+        /* display: block; */
+        gap: 250px;
+        .container-img {
+          /* margin-left: 10%; */
+          img {
+            /* width: 100%; */
+          }
+        }
+        .accordion {
+          width: 100%;
+        }
+      }
+    }
+  #order {
+    .card {
+      max-width: 500px;
+      font-size: 30px;
+    }
+    .card2 {
+      width: 60%;
+    }
+  }
+}
+@media (max-width: 900px) {
+  #faq {
+      .faq-container {
+        gap: 250px;
+        .container-img {
+        }
+        .accordion {
+          width: 100%;
+          h1{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  #order {
+    .card {
+      max-width: 450px;
+      font-size: 25px;
+    }
+    .card2 {
+      width: 70%;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #faq {
+    padding-top: 50px;
+  }
+  #hero {
+    .card {
+      h1 {
+        width: 400px;
+      }
+    }
+    img {
+      max-width: 150%;
+    }
+  }
+  #work {
+    padding: 100px 0px 50px 0px;
+  }
+  #order {
+    padding: 50px 0px 20px 0px;
+  }
+  #contact {
+    padding: 40px 0px;
+  }
+}
+@media (max-width: 900px) {
+  #work {
+    .card {
+      padding: 0px;
+    }
+    img {
+      height: 150px;
+      max-width: 105%;
+    }
+  }
+  #services {
+    .title {
+      font-size: 30px;
+    }
+  }
+  #hero {
+    padding-bottom: 50px;
+    .card {
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    img {
+      max-width: 128%;
+    }
+  }
+}
+@media (max-width: 850px) {
+  #contact {
+    .title {
+      text-align: center;
+    }
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+      .container-map {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  #hero {
+    .container {
+      padding: 0px;
+      .card {
+        width: 100%;
+        h1 {
+          width: 300px;
+          font-size: 25px;
+          line-height: 1.1;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  #faq {
+    .faq-container {
+      flex-wrap: wrap;
+      gap: 0px;
+      .accordion {
+        h1 {
+          text-align: center;
+        }
+        .accordion-card {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+  #work {
+    padding: 20px 0px;
+  }
+  #order {
+    .container {
+      flex-wrap: wrap;
+      .card {
+        max-width: 100%;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      .pages {
+        text-align: center;
+      }
+      .card2 {
+        width: 90%;
+        h1 {
+          text-align: center;
+          margin: 5px 0px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  #hero {
+    .container {
+      padding: 0px;
+      .card {
+        width: 100%;
+        h1 {
+          width: 300px;
+          font-size: 20px;
+          line-height: 1.1;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      img {
+        max-width: 120%;
+      }
+    }
+  }
+  #faq {
+    .faq-container {
+      padding: 0px;
+      .container-img {
+        .img {
+          max-height: 500px;
+        }
+      }
+      .accordion {
+        .accordion-card {
+          width: 100%;
+        }
+      }
+    }
+  }
+  #services {
+    #services-animation {
+      padding: 0px;
+    }
+    .card {
+      flex-wrap: wrap;
+      padding: 20px;
+      .card-icon {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .icon {
+          margin: 0px;
+        }
+        p {
+          margin: 0px;
+        }
+      }
+      .card-text {
+        margin: 10px 0px;
+        h1 {
+          font-size: 18px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 680px) {
+  #hero {
+    padding-bottom: 20px;
+    .container {
+      padding: 0px;
+      .card {
+        width: 100%;
+        h1 {
+          width: 300px;
+          font-size: 19px;
+          line-height: 1.1;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 770px) {
+  #work {
+    .title {
+      font-size: 30px;
+    }
+    .card-c {
+      grid-template-columns: repeat(2, 2fr);
+    }
+  }
+}
+
+@media (max-width: 610px) {
+  #faq {
+    .faq-container {
+      padding: 0px;
+      .container-img {
+        .img {
+          max-height: 450px;
+        }
+      }
+      .accordion {
+        .accordion-card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  #hero {
+    .container {
+      .row {
+        flex-wrap: wrap;
+        .card {
+          width: 100%;
+          p, h1 {
+            width: 100%;
+            text-align: center;
+          }
+        }
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+  #footer {
+    .container {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  #faq {
+    .faq-container {
+      .container-img {
+        .img {
+          max-height: 400px;
+        }
+      }
+    }
+  }
+  #work {
+    .title {
+      font-size: 25px;
+      margin-bottom: 50px;
+    }
+    .card-c {
+      grid-template-columns: repeat(1, 2fr);
+      margin-left: 10%;
+      width: 80%;
+      p {
+        max-width: 80%;
+      }
+    }
+  }
+  #services {
+    .card {
+      width: 80%;
+    }
+  }
+}
+@media (max-width: 500px) {
+  #faq {
+    .faq-container {
+      .container-img {
+        .img {
+          max-height: 370px;
+        }
+      }
+      .accordion {
+        h1 {
+          font-size: 25px;
+        }
+        button {
+          font-size: 17px;
+        }
+      }
+    }
+    .animation {
+      div {
+        font-size: 22px;
+      }
+    }
+  }
+  #services {
+    .title {
+      font-size: 25px;
+    }
+  }
+  #order {
+    .card {
+      font-size: 22px;
+    }
+    .card2 {
+      h1 {
+        font-size: 25px;
+      }
+    }
+  }
+  #contact {
+    .title {
+      font-size: 27px;
+    }
+  }
+
 }
 </style>
