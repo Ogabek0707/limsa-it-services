@@ -120,6 +120,12 @@ const dropdownRef = ref(null)
 const openModal = ref('')
 const isOpen = ref(false)
 
+const OpenModal = () => {
+  setTimeout(() => {
+    openModal.value.openModal()
+  }, 4000);
+}
+
 const isClose = () => {
   setTimeout(() => {
     isOpen.value = false
@@ -197,7 +203,9 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
 });
-
+onMounted(() => {
+  OpenModal()
+})
 </script>
 
 <style lang="scss" scoped>
